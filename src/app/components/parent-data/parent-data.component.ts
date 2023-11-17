@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ParentDataComponent {
 
 
-  @Input() data!: {name:string, email:string, role:string}
+  @Input() data!: { name:string, email:string, role:string }
 
 }
