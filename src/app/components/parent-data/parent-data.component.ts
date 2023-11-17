@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'parent-data',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './parent-data.component.css'
 })
 export class ParentDataComponent {
+
+
+  @Input() data!: {name:string, email:string, role:string}
 
 }
