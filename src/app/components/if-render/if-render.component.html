@@ -1,0 +1,14 @@
+
+<div class="class">
+    <div *ngIf="canShow">Estamos mostrando isso porque foi permitido</div>
+
+    <!--O else deve criar um 'componente'-->
+    <h2 *ngIf="name === 'Gustavo'; else nameNotFound">Meu nome é Gustavo</h2>
+
+    <!--Aqui é linkado o componente do else, para caso o else for atendido -->
+    <ng-template #nameNotFound>
+        <div>
+            <h2>O nome não foi encontrado</h2>
+        </div>
+    </ng-template>
+</div>
