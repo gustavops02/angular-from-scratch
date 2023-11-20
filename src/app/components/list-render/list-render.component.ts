@@ -19,7 +19,8 @@ export class ListRenderComponent {
   }
 
   removeAnimal(animal: Animal) {
-    this.animals = this.listService.remove(this.animals, animal)
+    this.animals = this.animals.filter((a) =>animal.name !== a.name); // Feito a exclusão pelo front
+    this.listService.remove(animal.id).subscribe(); // Feito a exclusão pelo back-end
   }
 
 
