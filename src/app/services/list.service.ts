@@ -26,4 +26,8 @@ export class ListService {
 
   }
 
+  getItem(id: number): Observable<Animal> {
+      return this.httpClient.get<Animal>(`${this.endpoint}/${id}`)
+  }
+
 }
